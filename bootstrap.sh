@@ -17,7 +17,6 @@ cd ~/Projects/personal
 git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
 
-
 # Installs
 ./install.sh
 
@@ -29,3 +28,6 @@ cd dotfiles
 
 # SSH permissions
 ./ssh.sh
+
+echo "Removing dotfiles now..."
+rm -rf ~/Projects/

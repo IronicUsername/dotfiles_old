@@ -13,6 +13,7 @@ brew "wifi-password"
 brew "pyenv"
 brew "bat"
 brew "dockutil"
+brew "ipython"
 
 cask caffeine
 cask "docker"

@@ -103,14 +103,14 @@ defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.Apple.Dock show-recents -bool true
 
 # Dockutil configuration
-dockutil --no-restart --remove all
-dockutil --no-restart --add "/Applications/Visual Studio Code.app"
-dockutil --no-restart --add "/Applications/Godot.app/"
-dockutil --no-restart --add "/Applications/iTerm.app"
-dockutil --no-restart --add "/Applications/Firefox.app/"
-dockutil --no-restart --add "/Applications/Google Chrome.app"
-dockutil --no-restart --add "/Applications/Spotify.app"
-dockutil --no-restart --add "/Applications/Slack.app"
+dockutil --remove all --no-restart
+dockutil --add /Applications/Visual Studio Code.app --no-restart
+dockutil --add /Applications/Godot.app --after Visual Studio Code --no-restart
+dockutil --add /Applications/iTerm.app --after Godot --no-restart
+dockutil --add /Applications/Firefox.app --after iTerm --no-restart
+dockutil --add /Applications/Google Chrome.app --after Firefox --no-restart
+dockutil --add /Applications/Spotify.app --after Google Chrome --no-restart
+dockutil --add /Applications/Slack.app --after Spotify --no-restart
 
 ###############################################################################
 # Software Updates                                                            #

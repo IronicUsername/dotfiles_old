@@ -34,8 +34,8 @@ source $HOME/.poetry/env
 poetry completions zsh > $HOME/.zsh/completions/_poetry
 
 echo "Installing python 3.7..."
-pyenv install -s 3.7.5
-pyenv global 3.7.5
+pyenv install 3.7.5
+pyenv install 3.6.8
 
 # Accept Xcode license
 # sudo xcodebuild -license accept
