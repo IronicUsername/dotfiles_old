@@ -5,6 +5,7 @@ COMPUTER_NAME="deniz"
 
 osascript -e 'tell application "System Preferences" to quit'
 
+echo "Admin login."
 # Ask for the administrator password upfront
 sudo -v
 
@@ -110,19 +111,6 @@ dockutil --no-restart --add "/Applications/Firefox.app/"
 dockutil --no-restart --add "/Applications/Google Chrome.app"
 dockutil --no-restart --add "/Applications/Spotify.app"
 dockutil --no-restart --add "/Applications/Slack.app"
-
-###############################################################################
-# Mail                                                                        #
-###############################################################################
-
-# Disable sound for incoming mail
-defaults write com.apple.mail MailSound -string ""
-
-# Mark all messages as read when opening a conversation
-defaults write com.apple.mail ConversationViewMarkAllAsRead -bool true
-
-# Show most recent message at the top in conversations
-defaults write com.apple.mail ConversationViewSortDescending -bool true
 
 ###############################################################################
 # Software Updates                                                            #

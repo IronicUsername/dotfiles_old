@@ -35,6 +35,7 @@ poetry completions zsh > $HOME/.zsh/completions/_poetry
 
 echo "Installing python 3.7..."
 pyenv install -s 3.7.5
+pyenv global 3.7.5
 
 # Accept Xcode license
 # sudo xcodebuild -license accept
@@ -45,7 +46,7 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 # source ~/.zshrc
 
 # VSCode packages
-# echo "Installing VSCode Packages..."
-# xargs -n 1 code --install-extension < ~/Projects/personal/dotfiles/vscode/extensions.txt
+echo "Installing VSCode Packages..."
+xargs -n 1 code --install-extension < ~/Projects/personal/dotfiles/vscode/extensions.txt
 
 echo "==> Done!"
