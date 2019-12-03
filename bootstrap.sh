@@ -28,6 +28,3 @@ cd dotfiles
 
 # SSH permissions
 ./ssh.sh
-
-echo "Removing dotfiles now..."
-rm -rf ~/Projects/

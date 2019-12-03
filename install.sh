@@ -38,7 +38,7 @@ pyenv install 3.7.5
 pyenv install 3.6.8
 
 # Accept Xcode license
-# sudo xcodebuild -license accept
+sudo xcodebuild -license accept
 
 # Make git use diff-so-fancy for every output
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"

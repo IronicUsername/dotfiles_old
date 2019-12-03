@@ -15,7 +15,7 @@ brew "bat"
 brew "dockutil"
 brew "ipython"
 
-cask caffeine
+cask "caffeine"
 cask "docker"
 cask "font-inconsolata"
 cask "font-source-code-pro"
@@ -24,7 +24,7 @@ cask "iterm2"
 cask "visual-studio-code"
 cask "google-chrome"
 cask "slack"
-cask godot
-cask sensiblesidebuttons
-cask spotify
-cask github
+cask "godot"
+cask "sensiblesidebuttons"
+cask "spotify"
+cask "github"
