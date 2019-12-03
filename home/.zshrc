@@ -18,7 +18,6 @@ plugins=(alias-tips
         fancy-ctrl-z
         fast-syntax-highlighting
         git
-        globalias
         z
         zsh-autosuggestions
         zsh-navigation-tools)
@@ -29,8 +28,6 @@ ZSH_THEME="agnoster"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 source $HOME/.iterm2_shell_integration.zsh
 
 

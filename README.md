@@ -19,5 +19,5 @@ The script will make sure that every permission for the SSH are set correctly af
 
 To install just curl the `bootstrap.sh`.
 ```
-curl -o- https://raw.githubusercontent.com/deusavalon/dotfiles/master/bootstrap.sh | bash
+curl -o- https://raw.githubusercontent.com/IronicUsername/dotfiles/master/bootstrap.sh | bash
 ```

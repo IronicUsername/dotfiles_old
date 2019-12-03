@@ -49,4 +49,3 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 # xargs -n 1 code --install-extension < ~/Projects/personal/dotfiles/vscode/extensions.txt
 
 echo "==> Done!"
-
