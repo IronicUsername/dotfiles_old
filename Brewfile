@@ -15,6 +15,7 @@ brew "bat"
 brew "dockutil"
 brew "exa"
 
+cask caffeine
 cask "docker"
 cask "font-inconsolata"
 cask "font-source-code-pro"
@@ -22,11 +23,9 @@ cask "insomnia"
 cask "iterm2"
 cask "the-unarchiver"
 cask "visual-studio-code"
-cask "google-cloud-sdk"
 cask "google-chrome"
 cask "slack"
-cask "whatsapp"
-cask "dashlane"
-cask "google-backup-and-sync"
-cask "istat-menus"
-cask "vmware-fusion"
+cask godot
+cask sensiblesidebuttons
+cask spotify
+cask github

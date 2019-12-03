@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "==> Running osx.sh"
 
-COMPUTER_NAME="Deus"
+COMPUTER_NAME="deniz"
 
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -34,7 +34,7 @@ sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
 sudo nvram SystemAudioVolume=" "
 
 # Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent YES
+defaults write com.apple.menuextra.battery ShowPercent NO
 
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
@@ -59,10 +59,10 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -99,19 +99,17 @@ defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-br-corner -int 0
 
 # Disable last recent applications
-defaults write com.Apple.Dock show-recents -bool false
+defaults write com.Apple.Dock show-recents -bool true
 
 # Dockutil configuration
 dockutil --no-restart --remove all
-dockutil --no-restart --add "/Applications/Google Chrome.app"
-dockutil --no-restart --add "/Applications/iTerm.app"
-dockutil --no-restart --add "/Applications/Slack.app"
-dockutil --no-restart --add "/Applications/WhatsApp.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
-dockutil --no-restart --add "/System/Applications/Mail.app"
-dockutil --no-restart --add "/Applications/Dashlane.app"
-dockutil --no-restart --add "/System/Applications/Messages.app"
-dockutil --view list --display folder --add "~/Downloads"
+dockutil --no-restart --add "/Applications/Godot.app/"
+dockutil --no-restart --add "/Applications/iTerm.app"
+dockutil --no-restart --add "/Applications/Firefox.app/"
+dockutil --no-restart --add "/Applications/Google Chrome.app"
+dockutil --no-restart --add "/Applications/Spotify.app"
+dockutil --no-restart --add "/Applications/Slack.app"
 
 ###############################################################################
 # Mail                                                                        #

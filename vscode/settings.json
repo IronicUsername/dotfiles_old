@@ -1,50 +1,52 @@
 {
-    "docker.showExplorer": false,
-    "editor.minimap.enabled": true,
-    "editor.rulers": [
-        100,
-        80
-    ],
-    "editor.tabCompletion": true,
-    "editor.tabSize": 2,
-    "eslint.packageManager": "yarn",
-    "explorer.confirmDragAndDrop": false,
-    "extensions.ignoreRecommendations": false,
-    "files.exclude": {
-        "**/*.pyc": true,
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/__pycache__": true,
-        "**/CVS": true
-    },
-    "files.insertFinalNewline": true,
+    "update.channel": "none",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "python.pythonPath": "/Users/deniz/.pyenv/versions/3.7.5/bin/python",
     "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "prettier.arrowParens": "always",
-    "prettier.singleQuote": true,
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "88"
-    ],
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "newUntitledFile",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "files.trimFinalNewlines": true,
+    "editor.renderWhitespace": "all",
+    "workbench.statusBar.feedback.visible": false,
+    "files.insertFinalNewline": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "block",
+    "editor.scrollbar.vertical": "mouseover",
+    "editor.scrollbar.verticalScrollbarSize": 8,
+    // StatusBar color:
+    "workbench.colorCustomizations": {
+        "statusBar.background" : "#732485",
+        "statusBar.noFolderBackground" : "#222225",
+        "statusBar.debuggingBackground": "#432485",
+        "editor.lineHighlightBackground": "#2a2a2a"
     },
-    "[python]": {
-        "editor.tabSize": 4
-    },
-    "[jinja-html]": {
-
-     },
-     "files.associations": {
-         "*.jinja": "yaml"
-     },
-     "[html]": {
-         "editor.defaultFormatter": "esbenp.prettier-vscode"
-     }
+    "powermode.shakeIntensity": 1,
+    "powermode.enableShake": false,
+    "powermode.enableStatusBarComboTimer": false,
+    "workbench.fontAliasing": "antialiased",
+    "terminal.integrated.cursorBlinking": true,
+    "debug.console.fontFamily": "Inconsolata for Powerline",
+    "terminal.integrated.fontSize": 14,
+    "editor.fontFamily": "Inconsolata for Powerline",
+    "editor.fontSize": 14,
+    "debug.console.fontSize": 14,
+    "debug.toolBarLocation": "floating",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "workbench.activityBar.visible": false,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.maxColumn": 100,
+    "editor.minimap.showSlider": "always",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "workbench.startupEditor": "none",
+    "material-icon-theme.showWelcomeMessage": false,
+    "gitlens.views.repositories.location": "scm",
+    "gitlens.views.fileHistory.location": "scm",
+    "gitlens.views.lineHistory.location": "scm",
+    "gitlens.views.search.location": "scm",
+    "gitlens.views.compare.location": "scm",
+    "editor.minimap.enabled": false,
+    "powermode.enabled": true,
+    "sync.gist": "c6f9f9ec94f35d25790d4841027c4748",
+    "python.venvPath": "${workspaceFolder}/.venv/bin/python",
+    "window.zoomLevel": -0.5,
 }

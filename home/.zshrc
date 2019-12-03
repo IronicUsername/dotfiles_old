@@ -25,7 +25,7 @@ plugins=(alias-tips
 
 
 # Theme
-ZSH_THEME="sunrise"
+ZSH_THEME="agnoster"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
@@ -40,7 +40,7 @@ export CFLAGS="$CFLAGS -I$(xcrun --show-sdk-path)/usr/include"
 
 
 # Commands
-export EDITOR=vim 
+export EDITOR=vim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
@@ -66,5 +66,5 @@ mkcd ()
     cd -P -- "$1"
 }
 
-DEFAULT_USER="denis"
+DEFAULT_USER="deniz"
 prompt_context(){}

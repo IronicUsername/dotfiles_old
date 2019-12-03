@@ -14,7 +14,7 @@ echo "==> Running bootstrap.sh"
 echo "Cloning dotfiles repo..."
 mkdir -p ~/Projects/personal
 cd ~/Projects/personal
-git clone https://github.com/deusavalon/dotfiles.git
+git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
 
 

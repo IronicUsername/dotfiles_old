@@ -7,13 +7,10 @@ alias h='cd ~/'
 alias sudo='sudo '
 
 # Shortcuts
-alias dl="cd ~/Downloads"
-alias d="cd ~/Desktop"
-alias p="cd ~/Projects"
 alias dotfiles="cd ~/Projects/personal/dotfiles"
-alias o='open .'
-alias ls='ls -lah'
-alias e='exa -lah --git --time-style long-iso -g --group-directories-first'
+alias ipy="ipython"
+alias killem='docker-compose down -v'
+
 
 # Network
 alias dig="dig @8.8.8.8 ANY +noall +answer $1"
