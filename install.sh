@@ -34,7 +34,6 @@ curl -sL https://iterm2.com/shell_integration/zsh > ~/.iterm2_shell_integration.
 
 echo "Installing poetry..."
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
-source $HOME/.poetry/env
 poetry completions zsh > $HOME/.zsh/completions/_poetry
 
 echo "Installing python 3.7..."
