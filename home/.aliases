@@ -2,14 +2,18 @@
 alias ..="cd .."
 alias ...="cd ../.."
 alias h='cd ~/'
+alias dev='cd ~/Development/'
+alias 100portal='cd ~/Development/einhundert-portal'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
 # Shortcuts
-alias dotfiles="cd ~/Projects/personal/dotfiles"
+alias dotfiles="cd ~/.personal/config/dotfiles"
 alias ipy="ipython"
 alias killem='docker-compose down -v'
+alias clire='exec $SHELL'
+alias clirm='clear && echo -en "\e[3J"'
 
 
 # Network
@@ -40,8 +44,8 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # VS Code extension management
-alias vscode-extensions-save='code --list-extensions > ~/Projects/personal/dotfiles/vscode/extensions.txt && echo Done!'
-alias vscode-extensions-install='xargs -n 1 code --install-extension < ~/Projects/personal/dotfiles/vscode/extensions.txt'
+alias vscode-extensions-save='code --list-extensions > ~/.personal/config/dotfiles/vscode/extensions.txt && echo Done!'
+alias vscode-extensions-install='xargs -n 1 code --install-extension < ~/.personal/config/dotfiles/vscode/extensions.txt'
 
 # ImageOptim
 alias imageoptim='open -a ImageOptim "$@"'

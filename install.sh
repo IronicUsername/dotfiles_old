@@ -15,7 +15,11 @@ echo "Installing zsh plugins..."
 git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+
+echo "Installing oh-my-zsh custom theme"
+cp ~/.personal/config/dotfiles/home/themes/agnoster-custom.zsh-theme ~/.oh-my-zsh/custom/themes/
 
 echo "Installing powerline fonts..."
 git clone https://github.com/powerline/fonts.git
@@ -47,6 +51,6 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 # VSCode packages
 echo "Installing VSCode Packages..."
-xargs -n 1 code --install-extension < ~/Projects/personal/dotfiles/vscode/extensions.txt
+xargs -n 1 code --install-extension < ~/.personal/config/dotfiles/vscode/extensions.txt
 
 echo "==> Done!"

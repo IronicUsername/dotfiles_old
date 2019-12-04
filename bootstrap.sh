@@ -12,8 +12,8 @@ echo "==> Running bootstrap.sh"
 # xcode-select --install
 
 echo "Cloning dotfiles repo..."
-mkdir -p ~/Projects/personal
-cd ~/Projects/personal
+mkdir -p ~/.personal/config
+cd ~/.personal/config
 git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
 

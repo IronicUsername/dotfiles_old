@@ -16,7 +16,7 @@ SAVEHIST=99999
 plugins=(alias-tips
         dirhistory
         fancy-ctrl-z
-        fast-syntax-highlighting
+        #fast-syntax-highlighting
         git
         z
         zsh-autosuggestions
@@ -24,7 +24,7 @@ plugins=(alias-tips
 
 
 # Theme
-ZSH_THEME="agnoster"
+ZSH_THEME="agnoster-custom"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
@@ -65,3 +65,8 @@ mkcd ()
 
 DEFAULT_USER="deniz"
 prompt_context(){}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+clirm
+screenfetch
