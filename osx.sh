@@ -100,7 +100,7 @@ defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-br-corner -int 0
 
 # Disable last recent applications
-defaults write com.Apple.Dock show-recents -bool true
+defaults write com.Apple.Dock show-recents -bool false
 
 # Dockutil configuration
 dockutil --remove all --no-restart
