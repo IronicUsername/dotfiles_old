@@ -2,7 +2,7 @@
 alias ..="cd .."
 alias ...="cd ../.."
 alias h='cd ~/'
-alias dev='cd ~/Development/'
+alias godev='cd ~/Development/'
 alias 100portal='cd ~/Development/einhundert-portal'
 
 # Enable aliases to be sudo’ed

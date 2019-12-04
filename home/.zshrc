@@ -16,10 +16,11 @@ SAVEHIST=99999
 plugins=(alias-tips
         dirhistory
         fancy-ctrl-z
-        #fast-syntax-highlighting
+        #fast-syntax-highlighting Maybe for later use who knows...
         git
         z
         zsh-autosuggestions
+        zsh-syntax-highlighting
         zsh-navigation-tools)
 
 
