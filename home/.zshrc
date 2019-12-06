@@ -48,6 +48,9 @@ export PATH=$HOME/Applications/bin:$PATH
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 
+#Pyenv
+eval "$(pyenv init -)"
+
 #Poetry
 source $HOME/.poetry/env
 
