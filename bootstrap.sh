@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "\e[1;31m==> Running bootstrap.sh\e[0m"
+echo -e "\e[1;31m==> Running bootstrap.sh\e[0m"
 
 # echo "Updating OSX..."
 # sudo softwareupdate --install --all --verbose
@@ -11,10 +11,10 @@ echo "\e[1;31m==> Running bootstrap.sh\e[0m"
 # rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 # xcode-select --install
 
-echo "\e[1;31mCreating Workfolder and personal folder...\e[0m"
+echo -e "\e[1;31mCreating Workfolder and personal folder...\e[0m"
 mkdir -p ~/Development/personal
 
-echo "\e[1;31mCloning dotfiles repo...\e[0m"
+echo -e "\e[1;31mCloning dotfiles repo...\e[0m"
 mkdir -p ~/.personal/config
 cd ~/.personal/config
 git clone https://github.com/IronicUsername/dotfiles.git

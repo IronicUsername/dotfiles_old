@@ -1,11 +1,11 @@
 #!/bin/bash
-echo "\e[1;31m==> Running osx.sh\e[0m"
+echo -e "\e[1;31m==> Running osx.sh\e[0m"
 
 COMPUTER_NAME="deniz"
 
 osascript -e 'tell application "System Preferences" to quit'
 
-echo "\e[1;31mAdmin login.\e[0m"
+echo -e "\e[1;31mAdmin login.\e[0m"
 # Ask for the administrator password upfront
 sudo -v
 
