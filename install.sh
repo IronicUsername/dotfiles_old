@@ -2,6 +2,7 @@
 echo -e "\e[1;31m==> Running install.sh\e[0m"
 
 echo -e "\e[1;31mInstalling Homebrew...\e[0m"
+mkdir -p $HOME/.homebrew
 git clone https://github.com/Homebrew/brew.git $HOME/.homebrew
 
 echo -e "\e[1;31mInstalling dependencies from Brewfile...\e[0m"
