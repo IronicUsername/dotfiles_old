@@ -12,6 +12,7 @@ echo "Setuping .zsh..."
 mkdir -p $HOME/.zsh/completions
 mkdir -p $HOME/.zsh/custom
 mkdir -p $HOME/.zsh/oh-my-zsh
+cp -R $HOME/.personal/config/dotfiles/home/zsh_setup.sh $HOME/.zsh/
 cp -R $HOME/.personal/config/dotfiles/home/custom $HOME/.zsh/
 export ZSH="$HOME/.zsh/oh-my-zsh" # So oh-my-zsh can isntall in .zsh
 
