@@ -15,6 +15,7 @@ cp -R $HOME/.personal/config/dotfiles/home/zsh_setup.sh $HOME/.zsh/
 cp -R $HOME/.personal/config/dotfiles/home/custom $HOME/.zsh/
 
 echo "Installing oh-my-zsh..."
+export ZSH=~/.zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing zsh plugins..."
