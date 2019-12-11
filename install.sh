@@ -2,24 +2,30 @@
 echo "==> Running install.sh"
 
 echo "Installing Homebrew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+git clone https://github.com/Homebrew/brew.git $HOME/.homebrew
 
 echo "Installing dependencies from Brewfile..."
 brew tap Homebrew/bundle
 brew bundle
 
+echo "Setuping .zsh..."
+mkdir -p $HOME/.zsh/completions
+mkdir -p $HOME/.zsh/custom
+mkdir -p $HOME/.zsh/oh-my-zsh
+cp -R $HOME/.personal/config/dotfiles/home/custom $HOME/.zsh/
+export ZSH="$HOME/.zsh/oh-my-zsh" # So oh-my-zsh can isntall in .zsh
+
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing zsh plugins..."
-git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH/custom/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
+git clone https://github.com/djui/alias-tips.git $ZSH/custom/plugins/alias-tips
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
 
 echo "Installing oh-my-zsh custom theme"
-cp ~/.personal/config/dotfiles/home/themes/agnoster-custom.zsh-theme ~/.oh-my-zsh/custom/themes/
+cp $HOME/.personal/config/dotfiles/home/themes/agnoster-custom.zsh-theme $ZSH/custom/themes/
 
 echo "Installing powerline fonts..."
 git clone https://github.com/powerline/fonts.git
@@ -30,26 +36,31 @@ git clone https://github.com/powerline/fonts.git
 rm -rf fonts
 
 echo "Installing iTerm2 Shell Integration..."
-curl -sL https://iterm2.com/shell_integration/zsh > ~/.iterm2_shell_integration.zsh
+curl -sL https://iterm2.com/shell_integration/zsh > $HOME/.iterm2_shell_integration.zsh
 
-echo "Installing poetry..."
+echo "Installing and setting up poetry..."
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 poetry completions zsh > $HOME/.zsh/completions/_poetry
+poetry config settings.virtualenvs.in-project true
 
-echo "Installing python 3.7..."
+echo "Installing python..."
+echo "Python 3.7.5 ..."
 pyenv install 3.7.5
+echo "Python 3.6.8 ..."
 pyenv install 3.6.8
+echo "Set Python globally"
 pyenv global 3.7.5
+
 # Accept Xcode license
 sudo xcodebuild -license accept
 
 # Make git use diff-so-fancy for every output
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
-# source ~/.zshrc
+# source $HOME/.zshrc
 
 # VSCode packages
 echo "Installing VSCode Packages..."
-xargs -n 1 code --install-extension < ~/.personal/config/dotfiles/vscode/extensions.txt
+xargs -n 1 code --install-extension < $HOME/.personal/config/dotfiles/vscode/extensions.txt
 
 echo "==> Done!"

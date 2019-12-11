@@ -11,9 +11,15 @@ alias sudo='sudo '
 # Shortcuts
 alias dotfiles="cd ~/.personal/config/dotfiles"
 alias ipy="ipython"
-alias killem='docker-compose down -v'
 alias clire='exec $SHELL'
 alias clirm='clear && echo -en "\e[3J"'
+alias pt='pytest --no-cov -x'
+alias sv='source .venv/bin/activate'
+alias fl='flake8 && mypy src && mypy . && pydocstyle .'
+alias dcu='docker-compose up --force-recreate --build -d'
+alias killem='docker-compose down -v'
+
+
 
 
 # Network

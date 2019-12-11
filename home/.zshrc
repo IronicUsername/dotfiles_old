@@ -1,5 +1,6 @@
+caffeinate -i $HOME/.zsh/zsh_setup.sh
 #Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.zsh/oh-my-zsh"
 export TERM="xterm-256color"
 
 #Options
@@ -7,22 +8,29 @@ export TERM="xterm-256color"
 # setopt hist_expire_dups_first
 
 #General
+DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE="false"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
-#Plugins
-plugins=(alias-tips
-        dirhistory
-        fancy-ctrl-z
-        #fast-syntax-highlighting Maybe for later use who knows...
-        git
-        z
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-        zsh-navigation-tools)
+#Comand exec time stamp in history file
+HIST_STAMP="yyyy-mm-dd"
 
+ZSH_CUSTOM="$HOME/.zsh/custom"
+
+#Plugins
+plugins=(
+    # alias-tips
+    dirhistory
+    # fancy-ctrl-z
+    git
+    osx
+    z
+    zsh-autosuggestions
+    zsh-navigation-tools
+    zsh-syntax-highlighting #must be last
+)
 
 #Theme
 ZSH_THEME="agnoster-custom"
@@ -47,6 +55,13 @@ export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#Pyenv
+eval "$(pyenv init -)"
 
 #Pyenv
 eval "$(pyenv init -)"
@@ -70,12 +85,9 @@ mkcd ()
     cd -P -- "$1"
 }
 
-DEFAULT_USER="deniz"
-prompt_context(){}
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#Cli startup
-clirm
-screenfetch
+#Start
+# DEFAULT_USER="deniz"
+# prompt_context(){} idk
+if [[ ! $POETRY_ACTIVE ]]; then
+    screenfetch
+fi
