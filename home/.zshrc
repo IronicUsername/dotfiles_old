@@ -1,4 +1,4 @@
-caffeinate -i $HOME/.zsh/zsh_setup.sh
+caffeinate -i $HOME/.zsh/install.sh
 #Path to oh-my-zsh installation.
 export ZSH="$HOME/.zsh/oh-my-zsh"
 export TERM="xterm-256color"

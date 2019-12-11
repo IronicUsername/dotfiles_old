@@ -2,8 +2,7 @@
 echo "==> Running install.sh"
 
 echo "Installing Homebrew..."
-git clone https://github.com/Homebrew/brew $HOME/.homebrew
-export PATH="$HOME/.homebrew/bin:$PATH"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing dependencies from Brewfile..."
 brew tap Homebrew/bundle
@@ -13,7 +12,7 @@ echo "Setuping .zsh..."
 mkdir -p $HOME/.zsh/completions
 mkdir -p $HOME/.zsh/custom/themes
 mkdir -p $HOME/.zsh/custom/plugins
-cp -R $HOME/.personal/config/dotfiles/home/zsh_setup.sh $HOME/.zsh/
+cp -R $HOME/.personal/config/dotfiles/home/install.sh $HOME/.zsh/
 cp -R $HOME/.personal/config/dotfiles/home/custom $HOME/.zsh/
 
 echo "Installing oh-my-zsh..."
