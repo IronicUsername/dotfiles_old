@@ -10,7 +10,8 @@ brew bundle
 
 echo "Setuping .zsh..."
 mkdir -p $HOME/.zsh/completions
-mkdir -p $HOME/.zsh/custom
+mkdir -p $HOME/.zsh/custom/themes
+mkdir -p $HOME/.zsh/custom/plugins
 cp -R $HOME/.personal/config/dotfiles/home/zsh_setup.sh $HOME/.zsh/
 cp -R $HOME/.personal/config/dotfiles/home/custom $HOME/.zsh/
 
@@ -19,13 +20,13 @@ export ZSH=$HOME/.zsh/oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing zsh plugins..."
-git clone https://github.com/romkatv/powerlevel10k.git $HOME/.zsh/oh-my-zsh/custom/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/djui/alias-tips.git $HOME/.zsh/oh-my-zsh/custom/plugins/alias-tips
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/romkatv/powerlevel10k.git $HOME/.zsh/custom/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/djui/alias-tips.git $HOME/.zsh/custom/plugins/alias-tips
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/custom/plugins/zsh-syntax-highlighting
 
 echo "Installing oh-my-zsh custom theme"
-cp $HOME/.personal/config/dotfiles/home/themes/agnoster-custom.zsh-theme $HOME/.zsh/oh-my-zsh/custom/themes/
+cp $HOME/.personal/config/dotfiles/home/themes/agnoster-custom.zsh-theme $HOME/.zsh/custom/themes/
 
 echo "Installing powerline fonts..."
 git clone https://github.com/powerline/fonts.git
