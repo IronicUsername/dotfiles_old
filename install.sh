@@ -3,6 +3,7 @@ echo "==> Running install.sh"
 
 echo "Installing Homebrew..."
 git clone https://github.com/Homebrew/brew $HOME/.homebrew
+export PATH="$HOME/.homebrew/bin:$PATH"
 
 echo "Installing dependencies from Brewfile..."
 brew tap Homebrew/bundle
