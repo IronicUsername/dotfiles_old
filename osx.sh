@@ -110,7 +110,6 @@ dockutil --add /Applications/iTerm.app --after Godot --no-restart
 dockutil --add /Applications/Firefox.app --after iTerm --no-restart
 dockutil --add /Applications/Google\ Chrome.app --after Firefox --no-restart
 dockutil --add /Applications/Spotify.app --after Google\ Chrome --no-restart
-dockutil --add /Applications/Slack.app --after Spotify --no-restart
 
 ###############################################################################
 # Software Updates                                                            #
