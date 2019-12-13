@@ -17,11 +17,10 @@ SAVEHIST=99999
 #Comand exec time stamp in history file
 HIST_STAMP="yyyy-mm-dd"
 
-ZSH_CUSTOM="$HOME/.zsh/custom"
-
 #Plugins
+ZSH_CUSTOM="$HOME/.zsh/custom"
 plugins=(
-    # alias-tips
+    alias-tips
     dirhistory
     # fancy-ctrl-z
     git
@@ -59,12 +58,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#Pyenv
-eval "$(pyenv init -)"
-
-#Pyenv
-eval "$(pyenv init -)"
 
 #Poetry
 source $HOME/.poetry/env

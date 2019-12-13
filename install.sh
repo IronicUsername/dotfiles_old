@@ -39,8 +39,12 @@ rm -rf fonts
 echo "Installing iTerm2 Shell Integration..."
 curl -sL https://iterm2.com/shell_integration/zsh > $HOME/.iterm2_shell_integration.zsh
 
+echo "Installing virtualenv..."
+pip install virtualenv
+
 echo "Installing and setting up poetry..."
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+source $HOME/.poetry/env
 poetry completions zsh > $HOME/.zsh/completions/_poetry
 poetry config settings.virtualenvs.in-project true
 
