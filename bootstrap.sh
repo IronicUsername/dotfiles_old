@@ -19,6 +19,7 @@ mkdir -p ~/.personal/config
 cd ~/.personal/config
 git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
+ln -s $HOME/.personal/config/dotfiles $HOME/Development/personal/dotfiles
 
 # Installs
 ./install.sh
