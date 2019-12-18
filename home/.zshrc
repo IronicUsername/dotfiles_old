@@ -59,6 +59,12 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+#Pyenv (workaround)
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 #Poetry
 source $HOME/.poetry/env
 

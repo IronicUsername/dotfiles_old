@@ -50,4 +50,7 @@
     "python.venvPath": "${workspaceFolder}/.venv/bin/python",
     "window.zoomLevel": -0.5,
     "markdown-preview-enhanced.liveUpdate": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
