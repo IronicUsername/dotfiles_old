@@ -21,11 +21,23 @@ git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
 ln -s $HOME/.personal/config/dotfiles $HOME/Development/personal/dotfiles
 
-# Installs
-./install.sh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Install for MacOS
+    ./install-osx.sh
 
-# Defaults + Dockutil configuration
-./osx.sh
+    # Defaults + Dockutil configuration
+    ./osx.sh
+
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    # Install for Linux
+    ./install-lnx.sh
+else
+    echo "Wtf are you doing?"
+    exit
+fi
+
+# Install for both
+./install.sh
 
 # Symlinks
 ./symlinks.sh
