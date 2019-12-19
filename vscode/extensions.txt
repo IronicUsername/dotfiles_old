@@ -1,10 +1,13 @@
+akamud.vscode-theme-onedark
 auchenberg.vscode-browser-preview
-esbenp.prettier-vscode
+bierner.markdown-preview-github-styles
 Dart-Code.dart-code
 dbaeumer.vscode-eslint
 eamodio.gitlens
+esbenp.prettier-vscode
 Gruntfuggly.activitusbar
 heyimfuzz.banner-comments
+hoovercj.vscode-power-mode
 jcbuisson.vue
 JPTarquino.postgresql
 ms-azuretools.vscode-docker
@@ -14,7 +17,6 @@ octref.vetur
 oliversturm.fix-json
 PKief.material-icon-theme
 Shan.code-settings-sync
+shd101wyy.markdown-preview-enhanced
 stringham.angular-template-formatter
 yo1dog.cursor-align
-akamud.vscode-theme-onedark
-shd101wyy.markdown-preview-enhanced

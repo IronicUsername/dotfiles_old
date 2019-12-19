@@ -3,7 +3,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias h='cd ~/'
 alias godev='cd ~/Development/'
-alias 100portal='cd ~/Development/einhundert-portal'
+alias gopers='cd ~/Development/personal/'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -15,8 +15,8 @@ alias clire='exec $SHELL'
 alias clirm='clear && echo -en "\e[3J"'
 alias pt='pytest --no-cov -x'
 alias sv='source .venv/bin/activate'
-alias fl='flake8 && mypy src && mypy . && pydocstyle .'
-alias dcu='docker-compose up --force-recreate --build -d'
+alias fml='flake8 . && mypy src && pydocstyle .'
+alias dcu='docker-compose up --build --force-recreate -d'
 alias killem='docker-compose down -v'
 alias piprm='pip freeze | xargs pip uninstall -y'
 
@@ -56,7 +56,7 @@ alias vscode-extensions-install='xargs -n 1 code --install-extension < ~/.person
 alias imageoptim='open -a ImageOptim "$@"'
 
 # Other
-alias server='python -m SimpleHTTPServer 8888'
+alias server='python -m http.server 8888'
 alias redis='redis-server'
 alias npmls='npm list --depth=0 "$@" 2>/dev/null'
 alias pycclean='find . -name \*.pyc -delete'

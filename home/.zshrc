@@ -1,4 +1,5 @@
 caffeinate -i $HOME/.zsh/install.sh
+
 #Path to oh-my-zsh installation.
 export ZSH="$HOME/.zsh/oh-my-zsh"
 export TERM="xterm-256color"
@@ -88,5 +89,5 @@ mkcd ()
 # DEFAULT_USER="deniz"
 # prompt_context(){} idk
 if [[ ! $POETRY_ACTIVE ]]; then
-    screenfetch
+   screenfetch
 fi
