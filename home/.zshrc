@@ -88,6 +88,6 @@ mkcd ()
 #Start
 # DEFAULT_USER="deniz"
 # prompt_context(){} idk
-if [[ ! $POETRY_ACTIVE ]]; then
+if [[ ! $POETRY_ACTIVE ]] && [[ $TERM_PROGRAM != "vscode" ]]; then
    screenfetch
 fi
