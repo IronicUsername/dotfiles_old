@@ -72,3 +72,10 @@ echo "Installing VSCode Packages..."
 xargs -n 1 code --install-extension < $HOME/.personal/config/dotfiles/vscode/extensions.txt
 
 echo "==> Done!"
+
+# Installing Custom WhatsApp theme
+git clone https://github.com/m4heshd/whatsapp-desktop-dark.git $HOME/Development/custom/whatsapp-desktop-dark
+mv $HOME/Development/custom/whatsapp-desktop-dark/override.json $HOME/Development/custom/whatsapp-desktop-dark/override.json.backup
+ln -s $HOME/.personal/config/dotfiles/whatsapp/override.json $HOME/Development/custom/whatsapp-desktop-dark/override.json
+npm install $HOME/Development/custom/whatsapp-desktop-dark
+node . $HOME/Development/custom/whatsapp-desktop-dark

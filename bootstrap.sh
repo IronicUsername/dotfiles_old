@@ -12,11 +12,12 @@ echo "==> Running bootstrap.sh"
 # xcode-select --install
 
 echo "Creating Workfolder and personal folder..."
-mkdir -p ~/Development/personal
+mkdir -p $HOME/Development/personal
+mkdir -p $HOME/Development/custom
 
 echo "Cloning dotfiles repo..."
-mkdir -p ~/.personal/config
-cd ~/.personal/config
+mkdir -p $HOME/.personal/config
+cd $HOME/.personal/config
 git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
 ln -s $HOME/.personal/config/dotfiles $HOME/Development/personal/dotfiles
