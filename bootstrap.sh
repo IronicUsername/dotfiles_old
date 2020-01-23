@@ -11,7 +11,7 @@ echo "==> Running bootstrap.sh"
 # rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 # xcode-select --install
 
-echo "Creating Workfolder and personal folder..."
+echo "Creating work and personal folder..."
 mkdir -p $HOME/Development/personal
 mkdir -p $HOME/Development/custom
 
