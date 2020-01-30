@@ -28,6 +28,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # for Linux
     export HOMEBREW_BUNDLE_CASK_SKIP="github godot google-chrome insomnia iterm2 psquel slack sensiblesidebuttons spotify visual-studio-code whatsapp"
+    export HOMEBREW_BUNDLE_BREW_SKIP="dockutil"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 else
     echo "Wtf are you doing dude?"
