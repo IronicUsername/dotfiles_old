@@ -11,7 +11,7 @@ echo "==> Running bootstrap.sh"
 # rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 # xcode-select --install
 
-echo "Creating Workfolder and personal folder..."
+echo "Creating work and personal folder..."
 mkdir -p ~/Development/personal
 
 echo "Cloning dotfiles repo..."
@@ -21,26 +21,32 @@ git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
 ln -s $HOME/.personal/config/dotfiles $HOME/Development/personal/dotfiles
 
+echo "Installing Homebrew..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    # Install for MacOS
-    ./install-osx.sh
-
-    # Defaults + Dockutil configuration
-    ./osx.sh
-
+    # for MacOS
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-    # Install for Linux
-    ./install-lnx.sh
+    # for Linux
+    export HOMEBREW_BUNDLE_CASK_SKIP="github godot google-chrome insomnia iterm2 psquel slack sensiblesidebuttons spotify visual-studio-code whatsapp"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 else
-    echo "Wtf are you doing?"
+    echo "Wtf are you doing dude?"
     exit
 fi
 
 # Install for both
 ./install.sh
 
-# Symlinks
-./symlinks.sh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    ./osx/install-osx.sh
+    # Defaults + Dockutil configuration
+    # depends on the install.sh for both platforms (brew shit)
+    ./osx.sh
+    # Symlinks
+    ./symlinks.sh
 
 # SSH permissions
-./ssh.sh
+# IDK Maaaan
+# ./ssh.sh
+
+echo "==> done and done!"
