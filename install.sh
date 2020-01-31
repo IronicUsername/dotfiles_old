@@ -29,7 +29,7 @@ echo "Installing powerline fonts..."
 git clone https://github.com/powerline/fonts.git
 (
     cd fonts
-    ./install.sh
+    sh ./install.sh
 )
 rm -rf fonts
 

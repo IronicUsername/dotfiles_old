@@ -36,7 +36,7 @@ else
 fi
 
 # Install for both
-./install.sh
+sh ./install.sh
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     ./osx/install-osx.sh
@@ -45,6 +45,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     ./osx.sh
     # Symlinks
     ./symlinks.sh
+fi
 
 # SSH permissions
 # IDK Maaaan
