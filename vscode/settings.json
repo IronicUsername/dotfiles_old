@@ -53,4 +53,5 @@
     },
     "editor.cursorSmoothCaretAnimation": true,
     "window.zoomLevel": -0.5,
+    "autoDocstring.customTemplatePath": "/Users/deniz/.personal/config/dotfiles/vscode/.mustache",
 }

@@ -28,7 +28,6 @@ alias whois="whois -h whois-servers.net"
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias scan="nmap -T4 --max-rtt-timeout=500ms --initial-rtt-timeout=200ms --min-rtt-timeout=200ms --open --stats-every 5s $1"
 alias sscan="sudo nmap -sS -T4 --max-rtt-timeout=500ms --initial-rtt-timeout=200ms --min-rtt-timeout=200ms --open --stats-every 5s $1"
-alias ipinfo="open https://ipinfo.io/$1"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
@@ -97,4 +96,8 @@ function archive() {
 
 function unarchive() {
   tar xvJf "$1"
+}
+
+function ipinfo() {
+  open https://ipinfo.io/$1
 }

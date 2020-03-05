@@ -1,0 +1,32 @@
+{{summaryPlaceholder}}.
+
+{{#argsExist}}
+Parameters
+----------
+{{/argsExist}}
+{{#args}}
+{{var}}: {{typePlaceholder}}
+    {{descriptionPlaceholder}}.
+{{/args}}
+{{#kwargs}}
+{{var}}: {{typePlaceholder}} = {{&default}}
+    {{descriptionPlaceholder}}.
+{{/kwargs}}
+
+{{#exceptionsExist}}
+Raises
+------
+{{/exceptionsExist}}
+{{#exceptions}}
+{{typePlaceholder}}
+    {{descriptionPlaceholder}}.
+{{/exceptions}}
+
+{{#returnsExist}}
+Returns
+-------
+{{/returnsExist}}
+{{#returns}}
+{{typePlaceholder}}:
+    {{descriptionPlaceholder}}.
+{{/returns}}
