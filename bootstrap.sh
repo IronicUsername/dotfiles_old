@@ -32,4 +32,4 @@ ln -s $HOME/.personal/config/dotfiles $HOME/Development/personal/dotfiles
 ./symlinks.sh
 
 # SSH permissions
-./ssh.sh
+./ssh/ssh.sh
