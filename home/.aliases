@@ -19,6 +19,7 @@ alias fml='flake8 . && mypy src && pydocstyle .'
 alias dcu='docker-compose up --build --force-recreate -d'
 alias killem='docker-compose down -v'
 alias piprm='pip freeze | xargs pip uninstall -y'
+alias dockerrm='docker system prune -a --volumes'
 
 
 # Network
