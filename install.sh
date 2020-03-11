@@ -28,8 +28,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/cu
 echo "Installing oh-my-zsh custom theme"
 cp $HOME/.personal/config/dotfiles/home/themes/agnoster-custom.zsh-theme $HOME/.zsh/custom/themes/
 
-# incoming
-# echo "Installing tmux themes"
+echo "Installing tmux themes"
+git clone https://github.com/jimeh/tmux-themepack.git $HOME/.mypref/tmux-themepack
 
 echo "Installing powerline fonts..."
 git clone https://github.com/powerline/fonts.git
@@ -41,6 +41,7 @@ rm -rf fonts
 
 echo "Installing iTerm2 Shell Integration..."
 curl -sL https://iterm2.com/shell_integration/zsh > $HOME/.iterm2_shell_integration.zsh
+ln -s $HOME/.personal/config/dotfiles/iterm/ .mypref/iterm2
 
 echo "Installing pip packages..."
 pip install virtualenv six
