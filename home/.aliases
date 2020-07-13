@@ -20,6 +20,8 @@ alias dcu='docker-compose up --build --force-recreate -d'
 alias killem='docker-compose down -v'
 alias piprm='pip freeze | xargs pip uninstall -y'
 alias dockerrm='docker system prune -a --volumes'
+alias nrs='npm run serve'
+alias sshTunnel='ssh -L 3306:127.0.0.1:3306 cooldude@echeclus.uberspace.de'
 
 
 # Network

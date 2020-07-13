@@ -60,6 +60,8 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
+mkdir -p $HOME/Pictures/Screenshots
+defaults write com.apple.screencapture name ""
 defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 
 # Finder: show hidden files by default

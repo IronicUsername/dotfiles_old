@@ -53,9 +53,12 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
+export PATH=$HOME/.flutter/flutter/bin:$PATH
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+export ANDROID_HOME=/usr/local/share/android-sdk
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -74,6 +77,18 @@ source $HOME/.poetry/env
 if [[ -o login ]]; then
     export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 fi
+
+###-tns-completion-start-###
+if [ -f /Users/deniz/.tnsrc ]; then
+    source /Users/deniz/.tnsrc
+fi
+###-tns-completion-end-###
+
+###-tns-completion-start-###
+if [ -f /Users/deniz/.tnsrc ]; then
+    source /Users/deniz/.tnsrc
+fi
+###-tns-completion-end-###
 
 #Functions
 function lc () {
