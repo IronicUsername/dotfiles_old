@@ -40,7 +40,6 @@ source $HOME/.aliases
 source $HOME/.iterm2_shell_integration.zsh
 
 
-
 #Added /include CFLAGS so XCode is working properly
 export CFLAGS="$CFLAGS -I$(xcrun --show-sdk-path)/usr/include"
 
@@ -55,10 +54,11 @@ export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PATH=$HOME/.flutter/flutter/bin:$PATH
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export ANDROID_HOME=/usr/local/share/android-sdk
+
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export ANDROID_HOME=/usr/local/share/android-sdk
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -79,28 +79,16 @@ if [[ -o login ]]; then
 fi
 
 ###-tns-completion-start-###
-if [ -f /Users/deniz/.tnsrc ]; then
-    source /Users/deniz/.tnsrc
+if [ -f $HOME/.tnsrc ]; then
+    source $HOME/.tnsrc
 fi
 ###-tns-completion-end-###
 
 ###-tns-completion-start-###
-if [ -f /Users/deniz/.tnsrc ]; then
-    source /Users/deniz/.tnsrc
+if [ -f $HOME/.tnsrc ]; then
+    source $HOME/.tnsrc
 fi
 ###-tns-completion-end-###
-
-#Functions
-function lc () {
-    cd $1 &&
-    la $2
-}
-
-mkcd ()
-{
-    mkdir -p -- "$1" &&
-    cd -P -- "$1"
-}
 
 #Start
 # DEFAULT_USER="deniz"
