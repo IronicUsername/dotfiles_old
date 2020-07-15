@@ -21,7 +21,6 @@ alias killem='docker-compose down -v'
 alias piprm='pip freeze | xargs pip uninstall -y'
 alias dockerrm='docker system prune -a --volumes'
 alias nrs='npm run serve'
-alias sshTunnel='ssh -L 3306:127.0.0.1:3306 cooldude@echeclus.uberspace.de'
 
 
 # Network
@@ -103,4 +102,29 @@ function unarchive() {
 
 function ipinfo() {
   open https://ipinfo.io/$1
+}
+
+function sshTunnel() {
+  if [ -z "$1" ]
+    then
+      echo "No arguments supplied."
+      return
+  else
+    if [[ $1 =~ ^[+-]?[0-9]+$ ]]
+      then
+        dbPort=$1
+    elif [ $1 = "mysql" ]
+      then
+        dbPort=3306
+    elif [ $1 = "psql" ]
+      then
+        dbPort=5432
+    else
+      echo "An error occured."
+      return
+    fi
+  fi
+
+  echo "Connecting to port $dbPort..."
+  ssh -L $dbPort:127.0.0.1:$dbPort cooldude@echeclus.uberspace.de
 }
