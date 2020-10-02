@@ -103,8 +103,10 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>650 498 620 392 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1680 -543 1680 1027 -1680 -543 1680 1027 </string>
+	<string>1401 -1050 1680 1027 1401 -1050 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -825,6 +827,8 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.9</string>
+		<string>3.3.11</string>
+		<string>3.3.12</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -838,11 +842,13 @@
 	<key>NoSyncInstallationId</key>
 	<string>5E5F4A15-1554-419C-8762-3A6BC5E9AEB3</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>4</integer>
+	<integer>34</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>606254395.86246204</real>
+	<real>607010154.25641203</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -1617,8 +1623,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-25T20:09:11Z</date>
+	<date>2020-09-29T19:15:18Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>1013082410</integer>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
@@ -1644,6 +1654,10 @@
 	<integer>1</integer>
 	<key>TabsHaveCloseButton</key>
 	<true/>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Command History</string>
+	</array>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
@@ -1657,7 +1671,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.9</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

@@ -50,7 +50,6 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "editor.cursorSmoothCaretAnimation": true,
-    "window.zoomLevel": -0.5,
     "autoDocstring.customTemplatePath": "/Users/deniz/.personal/config/dotfiles/vscode/.mustache",
     "languageStylus.useSeparator": false,
     "editor.minimap.enabled": false,
@@ -63,4 +62,10 @@
     "zenMode.hideTabs": false,
     "zenMode.hideLineNumbers": false,
     "zenMode.hideStatusBar": false,
+    "editor.cursorBlinking": "solid",
+    "spotify.muteButtonPriority": 0,
+    "spotify.showMuteUnmuteVolumeButton": false,
+    "spotify.showSignInButton": false,
+    "spotify.showSignOutButton": false,
+    "window.zoomLevel": -0.5,
 }
