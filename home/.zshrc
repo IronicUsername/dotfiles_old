@@ -78,6 +78,9 @@ if [[ -o login ]]; then
     export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 fi
 
+#Rust
+source $HOME/.cargo/env
+
 ###-tns-completion-start-###
 if [ -f $HOME/.tnsrc ]; then
     source $HOME/.tnsrc

@@ -13,7 +13,7 @@ echo "==> Running bootstrap.sh"
 
 echo "Creating work and personal folder..."
 mkdir -p $HOME/Development/personal
-mkdir -p $HOME/Development/custom
+mkdir -p $HOME/Development/tools
 
 echo "Cloning dotfiles repo..."
 mkdir -p $HOME/.personal/config

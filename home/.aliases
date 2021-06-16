@@ -21,6 +21,7 @@ alias killem='docker-compose down -v'
 alias piprm='pip freeze | xargs pip uninstall -y'
 alias dockerrm='docker system prune -a --volumes'
 alias nrs='npm run serve'
+alias nrd='npm run dev'
 
 
 # Network
@@ -119,6 +120,9 @@ function sshTunnel() {
     elif [ $1 = "psql" ]
       then
         dbPort=5432
+    elif [ $1 = "mongo" ]
+      then
+        dbPort=27017
     else
       echo "An error occured."
       return
