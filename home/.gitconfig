@@ -1,6 +1,6 @@
 [user]
   name = IronicUsername
-  email = deniztoma512@gmail.com
+  email = github@trash-economy.io
 
 [core]
   excludesfile = ~/.gitignore
@@ -42,7 +42,7 @@
 	required = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

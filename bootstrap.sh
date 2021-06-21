@@ -14,13 +14,18 @@ echo "==> Running bootstrap.sh"
 echo "Creating work and personal folder..."
 mkdir -p $HOME/Development/personal
 mkdir -p $HOME/Development/tools
+mkdir -p $HOME/Development/sandbox
+mkdir -p $HOME/Development/work
+mkdir -p $HOME/.ssh
+mkdir -p $HOME/Music/soundcloud/
+ln -s $HOME/Music/soundcloud $HOME/Downloads/music
 
 echo "Cloning dotfiles repo..."
-mkdir -p $HOME/.personal/config
-cd $HOME/.personal/config
+mkdir -p $HOME/.personal
+cd $HOME/.personal
 git clone https://github.com/IronicUsername/dotfiles.git
 cd dotfiles
-ln -s $HOME/.personal/config/dotfiles $HOME/Development/personal/dotfiles
+ln -s $HOME/.personal/dotfiles $HOME/Development/personal/dotfiles
 
 # Installs
 ./install.sh
