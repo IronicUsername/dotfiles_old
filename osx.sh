@@ -23,7 +23,7 @@ sudo scutil --set LocalHostName "$COMPUTER_NAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 # Set language and text formats
-defaults write NSGlobalDomain AppleLanguages -array "en" "de"
+defaults write NSGlobalDomain AppleLanguages -array "en"
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
@@ -107,11 +107,11 @@ defaults write com.Apple.Dock show-recents -bool false
 # Dockutil configuration
 dockutil --remove all --no-restart
 dockutil --add /Applications/Visual\ Studio\ Code.app --no-restart
-dockutil --add /Applications/Godot.app --after Visual\ Studio\ Code --no-restart
-dockutil --add /Applications/iTerm.app --after Godot --no-restart
+dockutil --add /Applications/iTerm.app --after Visual\ Studio\ Code --no-restart
 dockutil --add /Applications/Firefox.app --after iTerm --no-restart
 dockutil --add /Applications/Google\ Chrome.app --after Firefox --no-restart
-dockutil --add /Applications/Spotify.app --after Google\ Chrome --no-restart
+dockutil --add /Applications/Slack\ Slack.app --after Google\ Chrome --no-restart
+dockutil --add /Applications/Spotify.app --after Slack --no-restart
 
 ###############################################################################
 # Software Updates                                                            #

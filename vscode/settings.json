@@ -46,7 +46,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "editor.cursorSmoothCaretAnimation": true,
-    "autoDocstring.customTemplatePath": "/Users/deniz/.personal/config/dotfiles/vscode/.mustache",
+    "autoDocstring.customTemplatePath": "/Users/deniz/.personal/dotfiles/vscode/.mustache",
     "languageStylus.useSeparator": false,
     "editor.minimap.enabled": false,
     "nativescript.analytics.enabled": false,
@@ -78,4 +78,10 @@
     },
     "python.languageServer": "Pylance",
     "files.defaultLanguage": "${activeEditorLanguage}",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter-notebook",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }
