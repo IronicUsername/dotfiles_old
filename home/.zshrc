@@ -74,24 +74,7 @@ if [[ -o login ]]; then
     export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 fi
 
-#Rust
-# source $HOME/.cargo/env
-
-###-tns-completion-start-###
-if [ -f $HOME/.tnsrc ]; then
-    source $HOME/.tnsrc
-fi
-###-tns-completion-end-###
-
-###-tns-completion-start-###
-if [ -f $HOME/.tnsrc ]; then
-    source $HOME/.tnsrc
-fi
-###-tns-completion-end-###
-
 #Start
-# DEFAULT_USER="deniz"
-# prompt_context(){} idk
 if [[ ! $POETRY_ACTIVE ]] && [[ $TERM_PROGRAM != "vscode" ]]; then
    screenfetch
 fi

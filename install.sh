@@ -9,6 +9,9 @@ brew tap Homebrew/bundle
 brew tap homebrew/cask-fonts
 brew bundle
 
+echo "Setting up pyenv..."
+ln -s $HOME/.personal/dotfiles/home/.zprofile $HOME/.zprofile
+
 echo "Setuping .zsh..."
 mkdir -p $HOME/.zsh/completions
 mkdir -p $HOME/.zsh/custom/themes
