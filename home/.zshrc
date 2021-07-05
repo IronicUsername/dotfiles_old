@@ -1,4 +1,5 @@
 caffeinate -i $HOME/.zsh/install.sh
+ZSH_DISABLE_COMPFIX=true
 
 #Path to oh-my-zsh installation.
 export ZSH="$HOME/.zsh/oh-my-zsh"
@@ -66,11 +67,6 @@ export NVM_DIR="$HOME/.nvm"
 #TheFuck
 eval $(thefuck --alias)
 
-#Pyenv (workaround)
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 #Poetry
 source $HOME/.poetry/env
 
@@ -78,24 +74,7 @@ if [[ -o login ]]; then
     export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 fi
 
-#Rust
-source $HOME/.cargo/env
-
-###-tns-completion-start-###
-if [ -f $HOME/.tnsrc ]; then
-    source $HOME/.tnsrc
-fi
-###-tns-completion-end-###
-
-###-tns-completion-start-###
-if [ -f $HOME/.tnsrc ]; then
-    source $HOME/.tnsrc
-fi
-###-tns-completion-end-###
-
 #Start
-# DEFAULT_USER="deniz"
-# prompt_context(){} idk
 if [[ ! $POETRY_ACTIVE ]] && [[ $TERM_PROGRAM != "vscode" ]]; then
    screenfetch
 fi

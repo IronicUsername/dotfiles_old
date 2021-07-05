@@ -12,7 +12,6 @@ Gruntfuggly.activitusbar
 heyimfuzz.banner-comments
 HookyQR.beautify
 hoovercj.vscode-power-mode
-JPTarquino.postgresql
 karigari.chat
 ms-azuretools.vscode-docker
 ms-python.python
@@ -33,14 +32,7 @@ redhat.java
 Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 shyykoserhiy.vscode-spotify
-stringham.angular-template-formatter
 syler.sass-indented
 sysoev.language-stylus
-VisualStudioExptTeam.vscodeintellicode
-vscjava.vscode-java-debug
-vscjava.vscode-java-dependency
-vscjava.vscode-java-pack
-vscjava.vscode-java-test
-vscjava.vscode-maven
 WallabyJs.quokka-vscode
 yo1dog.cursor-align

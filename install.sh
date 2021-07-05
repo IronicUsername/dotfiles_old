@@ -9,12 +9,16 @@ brew tap Homebrew/bundle
 brew tap homebrew/cask-fonts
 brew bundle
 
+echo "Setting up pyenv..."
+ln -s $HOME/.personal/dotfiles/home/.zprofile $HOME/.zprofile
+
 echo "Setuping .zsh..."
 mkdir -p $HOME/.zsh/completions
 mkdir -p $HOME/.zsh/custom/themes
 mkdir -p $HOME/.zsh/custom/plugins
 cp -R $HOME/.personal/dotfiles/home/install.sh $HOME/.zsh/
 cp -R $HOME/.personal/dotfiles/home/custom $HOME/.zsh/
+touch $HOME/.hushlogin
 
 echo "Installing oh-my-zsh..."
 export ZSH=$HOME/.zsh/oh-my-zsh
@@ -62,6 +66,8 @@ echo "Python 3.9.5 ..."
 pyenv install 3.9.5
 echo "Set Python globally"
 pyenv global 3.9.5
+
+echo 'eval "$(pyenv init --path)"' >> $HOME/.zprofile
 
 # Accept Xcode license
 sudo xcodebuild -license accept

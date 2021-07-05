@@ -16,6 +16,9 @@ mkdir -p $HOME/Development/personal
 mkdir -p $HOME/Development/tools
 mkdir -p $HOME/Development/sandbox
 mkdir -p $HOME/Development/work
+mkdir -p $HOME/.ssh
+mkdir -p $HOME/Music/soundcloud/
+ln -s $HOME/Music/soundcloud $HOME/Downloads/music
 
 echo "Cloning dotfiles repo..."
 mkdir -p $HOME/.personal

@@ -11,8 +11,8 @@ alias sudo='sudo '
 # Shortcuts
 alias dotfiles="cd ~/.personal/dotfiles"
 alias ipy="ipython"
-alias clire='exec $SHELL'
 alias clirm='clear && echo -en "\e[3J"'
+alias clire='clirm && exec $SHELL'
 alias pt='pytest --no-cov -x'
 alias sv='source .venv/bin/activate'
 alias fml='flake8 . && mypy src && pydocstyle .'
@@ -142,4 +142,17 @@ mkcd ()
 {
     mkdir -p -- "$1" &&
     cd -P -- "$1"
+}
+
+tmuxstart () {
+  # https://stackoverflow.com/a/54637889
+  tmux new-session -d -A -s "priv" -n "default"
+  tmux splitw -vb -p 5 -t 0
+  tmux splitw -vh -p 50 -t 1
+  tmux send-keys -t 0 "caffeinate -dim" Enter
+  tmux select-pane -t 1
+  tmux new-session -d -A -s "work" -c "$HOME/Development/work"
+  tmux splitw -vh -p 50 -t "work" -c "$HOME/Development/work"
+  tmux select-pane -t 0
+  tmux a -t "priv"
 }

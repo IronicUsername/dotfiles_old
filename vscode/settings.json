@@ -78,10 +78,8 @@
     },
     "python.languageServer": "Pylance",
     "files.defaultLanguage": "${activeEditorLanguage}",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter-notebook",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.showStartPage": false,
 }
