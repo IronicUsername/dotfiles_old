@@ -22,6 +22,8 @@ alias piprm='pip freeze | xargs pip uninstall -y'
 alias dockerrm='docker system prune -a --volumes'
 alias nrs='npm run serve'
 alias nrd='npm run dev'
+alias brewUpdateAll='brew update && brew outdated && brew upgrade'
+alias notes='code $HOME/Development/personal/notes'
 
 
 # Network
@@ -145,14 +147,26 @@ mkcd ()
 }
 
 tmuxstart () {
-  # https://stackoverflow.com/a/54637889
-  tmux new-session -d -A -s "priv" -n "default"
-  tmux splitw -vb -p 5 -t 0
-  tmux splitw -vh -p 50 -t 1
-  tmux send-keys -t 0 "caffeinate -dim" Enter
-  tmux select-pane -t 1
-  tmux new-session -d -A -s "work" -c "$HOME/Development/work"
-  tmux splitw -vh -p 50 -t "work" -c "$HOME/Development/work"
-  tmux select-pane -t 0
-  tmux a -t "priv"
+  session_priv="priv"
+  tmux has-session -t $session_priv 2>/dev/null
+  if [ $? != 0 ]; then
+    # https://stackoverflow.com/a/54637889
+    tmux new-session -d -A -s "priv" -n "default"
+    tmux splitw -vb -p 5 -t 0
+    tmux splitw -vh -p 50 -t 1 -c "$HOME/Development/"
+    tmux send-keys -t 0 "caffeinate -dim" Enter
+    tmux select-pane -t 1
+    tmux new-window -n "mails"
+    tmux send-keys -t 0 "neomutt" Enter
+  fi
+
+  session_work="work"
+  tmux has-session -t $session_work 2>/dev/null
+  if [ $? != 0 ]; then
+    tmux new-session -d -A -s "work" -c "$HOME/Development/work"
+    tmux splitw -vh -p 50 -t "work" -c "$HOME/Development/work"
+    tmux select-pane -t 0
+  fi
+
+  tmux a -t "priv":0
 }

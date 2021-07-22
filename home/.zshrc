@@ -1,4 +1,5 @@
 caffeinate -i $HOME/.zsh/install.sh
+stty discard undef
 ZSH_DISABLE_COMPFIX=true
 
 #Path to oh-my-zsh installation.

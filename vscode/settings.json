@@ -82,4 +82,15 @@
         "*.ipynb": "jupyter-notebook"
     },
     "python.showStartPage": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "[python]": {
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.wordBasedSuggestions": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
 }
