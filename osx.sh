@@ -107,10 +107,11 @@ defaults write com.Apple.Dock show-recents -bool false
 # Dockutil configuration
 dockutil --remove all --no-restart
 dockutil --add /Applications/Visual\ Studio\ Code.app --no-restart
-dockutil --add /Applications/iTerm.app --after Visual\ Studio\ Code --no-restart
+dockutil --add /Applications/Mail.app --after Visual\ Studio\ Code --no-restart
+dockutil --add /Applications/iTerm.app --after Mail --no-restart
 dockutil --add /Applications/Firefox.app --after iTerm --no-restart
-dockutil --add /Applications/Google\ Chrome.app --after Firefox --no-restart
-dockutil --add /Applications/Slack\ Slack.app --after Google\ Chrome --no-restart
+dockutil --add /Applications/Chromium.app --after Firefox --no-restart
+dockutil --add /Applications/Slack.app --after Chromium --no-restart
 dockutil --add /Applications/Spotify.app --after Slack --no-restart
 
 ###############################################################################
