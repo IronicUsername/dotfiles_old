@@ -3,12 +3,17 @@ echo "==> Running install.sh"
 
 echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 
 echo "Installing dependencies from Brewfile..."
 sudo -v
 brew tap Homebrew/bundle
 brew tap homebrew/cask-fonts
 brew bundle
+
+# Accept Xcode license
+sudo xcodebuild -license accept
 
 echo "Setting up pyenv..."
 ln -s $HOME/.personal/dotfiles/home/.zprofile $HOME/.zprofile
@@ -59,6 +64,8 @@ poetry completions zsh > $HOME/.zsh/completions/_poetry
 poetry config virtualenvs.in-project true
 
 echo "Installing python..."
+PYTHON27_VERSION="2.7.18" # Needed for npm
+pyenv install "$PYTHON27_VERSION"
 echo "Python 3.6.8 ..."
 pyenv install 3.6.8
 echo "Python 3.7.5 ..."
@@ -70,8 +77,6 @@ pyenv global 3.9.5
 
 echo 'eval "$(pyenv init --path)"' >> $HOME/.zprofile
 
-# Accept Xcode license
-sudo xcodebuild -license accept
 
 # Make git use diff-so-fancy for every output
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
