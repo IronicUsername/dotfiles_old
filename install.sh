@@ -5,6 +5,7 @@ echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Installing dependencies from Brewfile..."
+sudo -v
 brew tap Homebrew/bundle
 brew tap homebrew/cask-fonts
 brew bundle
