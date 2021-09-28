@@ -2,9 +2,7 @@
 echo "==> Running install.sh"
 
 echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 
 echo "Installing dependencies from Brewfile..."
 sudo -v
@@ -37,10 +35,12 @@ git clone https://github.com/djui/alias-tips.git $HOME/.zsh/custom/plugins/alias
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/custom/plugins/zsh-syntax-highlighting
 
 echo "Installing oh-my-zsh custom theme"
-cp $HOME/.personal/dotfiles/home/themes/agnoster-custom.zsh-theme $HOME/.zsh/custom/themes/
+ln -s $HOME/.personal/dotfiles/home/themes/agnoster-custom.zsh-theme $HOME/.zsh/custom/themes/
+ln -s $HOME/.personal/dotfiles/home/themes/agnoster-custom-server.zsh-theme $HOME/.zsh/custom/themes/
 
-echo "Installing tmux themes"
+echo "Installing tmux themes and addons"
 git clone https://github.com/jimeh/tmux-themepack.git $HOME/.mypref/tmux-themepack
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 echo "Installing powerline fonts..."
 git clone https://github.com/powerline/fonts.git
@@ -49,6 +49,9 @@ git clone https://github.com/powerline/fonts.git
     ./install.sh
 )
 rm -rf fonts
+
+echo "Installing Node Version Managment..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 echo "Installing iTerm2 Shell Integration..."
 curl -sL https://iterm2.com/shell_integration/zsh > $HOME/.iterm2_shell_integration.zsh
@@ -62,6 +65,9 @@ curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.p
 source $HOME/.poetry/env
 poetry completions zsh > $HOME/.zsh/completions/_poetry
 poetry config virtualenvs.in-project true
+
+mkdir $HOME/.zsh/custom/plugins/poetry
+poetry completions zsh > $HOME/.zsh/custom/plugins/poetry/_poetry
 
 echo "Installing python..."
 PYTHON27_VERSION="2.7.18" # Needed for npm

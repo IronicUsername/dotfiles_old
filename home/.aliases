@@ -8,6 +8,9 @@ alias gopers='cd ~/Development/personal/'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Work
+alias secret="aws-vault exec deniz-toma -- chamber"
+
 # Shortcuts
 alias dotfiles="cd ~/.personal/dotfiles"
 alias ipy="ipython"
@@ -147,26 +150,26 @@ mkcd ()
 }
 
 tmuxstart () {
-  session_priv="priv"
-  tmux has-session -t $session_priv 2>/dev/null
-  if [ $? != 0 ]; then
-    # https://stackoverflow.com/a/54637889
-    tmux new-session -d -A -s "priv" -n "default"
-    tmux splitw -vb -p 5 -t 0
-    tmux splitw -vh -p 50 -t 1 -c "$HOME/Development/"
-    tmux send-keys -t 0 "caffeinate -dim" Enter
-    tmux select-pane -t 1
-    tmux new-window -n "mails"
-    tmux send-keys -t 0 "neomutt" Enter
-  fi
+  if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    session_priv="priv"
+    tmux has-session -t $session_priv 2>/dev/null
+    if [ $? != 0 ]; then
+      # https://stackoverflow.com/a/54637889
+      tmux new-session -d -A -s "priv" -n "default"
+      tmux splitw -vb -p 5 -t 0
+      tmux splitw -vh -p 50 -t 1 -c "$HOME/Development/"
+      tmux send-keys -t 0 "caffeinate -dim" Enter
+      tmux select-pane -t 1
+    fi
 
-  session_work="work"
-  tmux has-session -t $session_work 2>/dev/null
-  if [ $? != 0 ]; then
-    tmux new-session -d -A -s "work" -c "$HOME/Development/work"
-    tmux splitw -vh -p 50 -t "work" -c "$HOME/Development/work"
-    tmux select-pane -t 0
-  fi
+    session_work="work"
+    tmux has-session -t $session_work 2>/dev/null
+    if [ $? != 0 ]; then
+      tmux new-session -d -A -s "work" -c "$HOME/Development/work"
+      tmux splitw -vh -p 50 -t "work" -c "$HOME/Development/work"
+      tmux select-pane -t 0
+    fi
 
+  fi
   tmux a -t "priv":0
 }

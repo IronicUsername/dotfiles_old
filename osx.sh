@@ -63,6 +63,15 @@ sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Set accent color to purple
+defaults write NSGlobalDomain AppleAccentColor -string "5"
+
+# Set highlight color to purple
+defaults write NSGlobalDomain AppleHighlightColor -string "0.780392 0.223529 0.772549"
+
+# Show item info to the right of the icons on the desktop
+/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
+
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent NO
 
@@ -127,14 +136,19 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-# Sleep the display after 15 minutes
-sudo pmset -a displaysleep 15
+# Sleep the display after 1 minute
+sudo pmset -a displaysleep 1
 
 # Disable machine sleep while charging
 sudo pmset -c sleep 0
 
 # Set machine sleep to 5 minutes on battery
 sudo pmset -b sleep 5
+
+sudo pmset -a disablesleep 1
+
+# Never go into computer sleep mode
+sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
@@ -189,6 +203,12 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Set the icon size of Dock items to 25 pixels
+defaults write com.apple.dock tilesize -int 25
+
+# Set the icon hover size of Dock items to 27 pixels
+defaults write com.apple.dock largesize -int 27
+
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
@@ -204,7 +224,7 @@ defaults write com.Apple.Dock show-recents -bool false
 # Dockutil configuration
 dockutil --remove all --no-restart
 dockutil --add /Applications/Visual\ Studio\ Code.app --no-restart
-dockutil --add /Applications/Mail.app --after Visual\ Studio\ Code --no-restart
+dockutil --add /System/Applications/Mail.app --after Visual\ Studio\ Code --no-restart
 dockutil --add /Applications/iTerm.app --after Mail --no-restart
 dockutil --add /Applications/Firefox.app --after iTerm --no-restart
 dockutil --add /Applications/Chromium.app --after Firefox --no-restart

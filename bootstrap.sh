@@ -12,7 +12,9 @@ echo "==> Running bootstrap.sh"
 # xcode-select --install
 
 echo "Creating work and personal folder..."
+mkdir -p $HOME/Development/.archive
 mkdir -p $HOME/Development/personal
+mkdir -p $HOME/Development/notes
 mkdir -p $HOME/Development/tools
 mkdir -p $HOME/Development/sandbox
 mkdir -p $HOME/Development/work

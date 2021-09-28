@@ -13,23 +13,58 @@
     "editor.scrollbar.verticalScrollbarSize": 8,
     // StatusBar color:
     "workbench.colorCustomizations": {
-        "statusBar.background" : "#732485",
-        "statusBar.noFolderBackground" : "#222225",
-        "statusBar.debuggingBackground": "#432485",
-        "editor.lineHighlightBackground": "#2a2a2a"
+        "statusBar.background" : "#7a0096",
+        "statusBar.noFolderBackground" : "#7a0096",
+        "statusBar.debuggingBackground": "#5b006f",
+        "editor.lineHighlightBackground": "#00000021",
+        "editor.findMatchHighlightBackground": "#7a009622",
+        "editor.findMatchHighlightBorder": "#7a0096",
+        "editor.findMatchBackground": "#7a0096",
+        "editor.findMatchBorder": "#0068a8",
+        "statusBar.foreground": "#ffffff",
+        "tab.activeBackground": "#7a009630",
+        "tab.hoverBackground": "#7a009610",
+        "sideBarTitle.foreground": "#ffffff55",
+        "sideBarSectionHeader.background": "#7a009622",
+        "sideBarSectionHeader.border": "#7a009699",
+        "editor.foldBackground": "#0068a825",
+        "list.hoverBackground": "#7a009633",
+        "editor.hoverHighlightBackground": "#7a009633",
+        "toolbar.hoverBackground": "#7a009633",
+        "editorHoverWidget.background": "#222222",
+        "editorHoverWidget.border": "#7a009655",
+        "editorGutter.foldingControlForeground": "#009cfe",
+        "editorIndentGuide.activeBackground": "#c300ee40",
+        "editorIndentGuide.background": "#009cfe40",
+        "editorLineNumber.activeForeground": "#c300ee",
+        "editorBracketMatch.background": "#7a009699",
+        "editorBracketMatch.border": "#7a009633",
+        "editor.selectionBackground": "#7a009650",
+        "editorLineNumber.foreground": "#009cfeaa",
+        "editorHint.foreground": "#c300ee",
     },
+    "editor.tokenColorCustomizations": {
+        // "comments": "#66a748",  /* green */
+        "comments": "#d060e9",   /* purple */
+        "keywords": "#ab5ea6",
+        "functions": "#bbbb7d",
+        "variables": "#8ebfdb",
+        "types": "#44caaf",
+        "strings": "#d09983",
+        "numbers": "#9fc38d"
+    },
+    "workbench.sideBar.location": "left",
     "powermode.shakeIntensity": 1,
     "powermode.enableShake": false,
     "powermode.enableStatusBarComboTimer": false,
     "terminal.integrated.cursorBlinking": true,
     "debug.console.fontFamily": "Inconsolata for Powerline",
     "terminal.integrated.fontSize": 14,
-    "editor.fontFamily": "Inconsolata for Powerline",
+    "editor.fontFamily": "Inconsolata",
     "debug.console.fontSize": 14,
     "debug.toolBarLocation": "floating",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "editor.minimap.maxColumn": 100,
-    "editor.minimap.showSlider": "always",
     "workbench.startupEditor": "none",
     "material-icon-theme.showWelcomeMessage": false,
     "gitlens.views.repositories.location": "scm",
@@ -47,21 +82,17 @@
     "editor.cursorSmoothCaretAnimation": true,
     "autoDocstring.customTemplatePath": "/Users/deniz/.personal/dotfiles/vscode/.mustache",
     "languageStylus.useSeparator": false,
-    "editor.minimap.enabled": false,
     "dart.debugExternalLibraries": true,
     "dart.debugSdkLibraries": true,
     "editor.suggestSelection": "first",
     "zenMode.fullScreen": false,
     "editor.cursorBlinking": "solid",
     "spotify.muteButtonPriority": 0,
-    "spotify.showMuteUnmuteVolumeButton": false,
     "spotify.showSignInButton": false,
     "spotify.showSignOutButton": false,
     "spotify.showLyricsButton": false,
-    "window.zoomLevel": -0.65,
     "editor.fontSize": 14,
     "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.activityBar.visible": false,
     "workbench.fontAliasing": "antialiased",
     "zenMode.hideTabs": false,
     "zenMode.hideLineNumbers": false,
@@ -76,11 +107,6 @@
     },
     "python.languageServer": "Pylance",
     "files.defaultLanguage": "${activeEditorLanguage}",
-    "workbench.editorAssociations": [
-        {
-            "*.ipynb": "jupyter-notebook"
-        }
-    ],
     "quokka.startViewStatusBar": false,
     "activitusbar.views": [
         {
@@ -102,11 +128,6 @@
         {
             "name": "extensions",
             "codicon": "extensions-view-icon"
-        },
-        {
-            "name": "extension.databaseExplorer",
-            "codicon": "database",
-            "tooltip": "Database"
         },
         {
             "name": "extension.liveshare",
@@ -134,5 +155,48 @@
         ],
         "editor.wordBasedSuggestions": true
     },
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "sync.autoUpload": true,
+    "sync.autoDownload": true,
+    "sync.quietSync": true,
+    "workbench.activityBar.visible": false,
+    "editor.inlayHints.fontFamily": "Inconsolata",
+    "terminal.integrated.fontFamily": "Inconsolata for Powerline",
+    "editor.codeLensFontFamily": "Inconsolata",
+    "indentRainbow.ignoreErrorLanguages": [
+        "python",
+        "markdown"
+    ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "window.zoomLevel": -0.65,
+    "workbench.editor.showTabs": true,
+    "indentRainbow.colors": [
+        // setup 1
+        // "rgba(121,0,148,0.07)",
+        // "rgba(80,0,138,0.07)",
+        // "rgba(0,104,168,0.07)",
+        // "rgba(0,156,255,0.07)",
+
+        // setup 2
+        "rgba(122,0,150,0.07)",
+        "rgba(179,5,227,0.07)",
+        "rgba(96,23,135,0.07)",
+        "rgba(0,156,255,0.07)",
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.title": "${rootPath}${separator}${activeEditorShort}",
+    "cSpell.language": "en,de",
+    "editor.minimap.size": "fill",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.enabled": false,
+    "cSpell.userWords": [
+        "pydantic",
+        "pytest",
+        "uvicorn"
+    ],
+    "cSpell.diagnosticLevel": "Hint"
 }
