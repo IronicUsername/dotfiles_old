@@ -31,8 +31,3 @@ echo "--> Done!"
 # Unset
 unset getFilesInDir
 unset symlinkFilesTo
-
-# if [ -f "$HOME/.zshrc.pre-oh-my-zsh" ]; then
-#   # echo "source ~/.zshrc.pre-oh-my-zsh" >> $HOME/.zshrc
-#   cat ~/.zshrc.pre-oh-my-zsh > ~/.zshrc
-# fi

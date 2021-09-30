@@ -11,23 +11,8 @@ echo "==> Running bootstrap.sh"
 # rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 # xcode-select --install
 
-echo "Creating work and personal folder..."
-mkdir -p $HOME/Development/.archive
-mkdir -p $HOME/Development/personal
-mkdir -p $HOME/Development/notes
-mkdir -p $HOME/Development/tools
-mkdir -p $HOME/Development/sandbox
-mkdir -p $HOME/Development/work
-mkdir -p $HOME/.ssh
-mkdir -p $HOME/Music/soundcloud/
-ln -s $HOME/Music/soundcloud $HOME/Downloads/music
-
-echo "Cloning dotfiles repo..."
-mkdir -p $HOME/.personal
-cd $HOME/.personal
-git clone https://github.com/IronicUsername/dotfiles.git
-cd dotfiles
-ln -s $HOME/.personal/dotfiles $HOME/Development/personal/dotfiles
+# Accept Xcode license
+sudo xcodebuild -license accept
 
 # Installs
 ./install.sh
