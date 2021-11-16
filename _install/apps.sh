@@ -7,7 +7,7 @@ echo "Installing dependencies from Brewfile..."
 sudo -v
 brew tap Homebrew/bundle
 brew tap homebrew/cask-fonts
-brew bundle
+brew bundle --file=../Brewfile
 
 echo "Installing Node Version Managment..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -27,6 +27,9 @@ echo "Python 3.7.5 ..."
 pyenv install 3.7.5
 echo "Python 3.9.5 ..."
 pyenv install 3.9.5
+
+# SC-IM
+# ln -s $HOME/.config/dotfiles/home/.config/sc-im/scimrc $HOME/.config/sc-im/
 
 # VSCode packages
 echo "Installing VSCode Packages..."
