@@ -50,6 +50,7 @@
     "activitusbar.priority":99999,
     "activitusbar.showSourceControlCounter": true,
     "autoDocstring.customTemplatePath": "/Users/deniz/.personal/dotfiles/vscode/.mustache",
+    "background.enabled": false,
     "cSpell.language": "en,de",
     "cSpell.userWords": [
         "pydantic",
@@ -57,11 +58,10 @@
         "uvicorn"
     ],
     "cSpell.diagnosticLevel": "Hint",
-    "banner-comments.h3": "4Max",
+    "banner-comments.h3": "3D Diagonal",
     "debug.console.fontFamily": "Inconsolata for Powerline",
     "debug.console.fontSize": 14,
     "debug.toolBarLocation": "floating",
-    "diffEditor.ignoreTrimWhitespace": false,
     "editor.guides.bracketPairs": true,
     "editor.rulers": [120],
     "editor.renderWhitespace": "all",
@@ -152,6 +152,7 @@
     "workbench.colorCustomizations": {
         // Breadcrumbs
         // "breadcrumb.background": "#7a009633",
+        "breadcrumb.activeSelectionForeground": "#009cfe",
         // Editor
         "editor.background": "#0d1117",
         "editor.lineHighlightBackground": "#00000021",
@@ -162,6 +163,7 @@
         "editor.findMatchHighlightBorder": "#7a0096",
         "editor.findMatchBackground": "#7a0096",
         "editor.findMatchBorder": "#388afd",
+        // "editor.stackFrameHighlightBackground": "#009dfe33",
         "editor.selectionBackground": "#7a009650",
         "editor.wordHighlightBackground": "#7a00964f",
         "editorBracketHighlight.foreground1": "#06ffff",
@@ -172,9 +174,11 @@
         "editorBracketMatch.border": "#7a009633",
         "editorOverviewRuler.border": "#00000000",
         "editorOverviewRuler.background": "#00000000",
-        "editorHoverWidget.background": "#222222",
+        "editorHoverWidget.background": "#0d1117",
         "editorHoverWidget.border": "#7a009655",
         "editorGutter.foldingControlForeground": "#009cfe",
+        "editorGutter.addedBackground": "#1ac66a",
+        "editorGutter.deletedBackground": "#fb1911",
         "editorIndentGuide.activeBackground": "#7a0096",
         "editorIndentGuide.background": "#009cfe40",
         "editorLineNumber.activeForeground": "#c300ee",
@@ -182,8 +186,32 @@
         "editorGroupHeader.tabsBackground": "#0d1117",
         "editorHint.foreground": "#c300ee",
         "editorRuler.foreground": "#7a009622",
+        "editorWidget.background": "#161b22",
+        "editorWidget.border": "#c300ee",
+        "editorWidget.resizeBorder": "#c300ee",
+        // Debug
+        "debugIcon.breakpointForeground": "#c300ee",
+        "debugIcon.breakpointCurrentStackframeForeground": "#c300ee",
+        "debugIcon.restartForeground": "#1ac66a",
+        "debugIcon.stopForeground": "#c300ee",
+        "debugIcon.continueForeground": "#009cfe",
+        "debugIcon.stepOverForeground": "#009cfe",
+        "debugIcon.stepOutForeground": "#009cfe",
+        "debugIcon.stepIntoForeground": "#009cfe",
+        "debugIcon.stepBackForeground": "#009cfe",
+        "debugIcon.pauseForeground": "#009cfe",
+        "debugIcon.startForeground": "#009cfe",
+        "debugToolBar.background": "#0d1117",
+        "debugToolBar.border": "#7a009655",
         // Input
-        "input.border": "#c300ee",
+        // "input.border": "#009cfe",
+        // GitLens
+        "gitlens.lineHighlightBackgroundColor": "#7a009633",
+        "gitlens.trailingLineForegroundColor": "#c200ee54",
+        // Progressbar
+        "progressBar.background": "#c300ee",
+        // Peek
+        "peekViewResult.background": "#0d1117",
         // Side Bar
         "sideBar.background": "#0d1117",
         // "sideBar.border": "#7a009633",
@@ -191,35 +219,42 @@
         "sideBarTitle.foreground": "#ffffff55",
         "sideBarSectionHeader.background": "#7a009622",
         "sideBarSectionHeader.border": "#7a009699",
-        "scrollbarSlider.hoverBackground": "#7a0096",
+        // Scrollbar Slider
+        "scrollbarSlider.hoverBackground": "#7a0096a1",
         "scrollbarSlider.activeBackground": "#7a009699",
         "scrollbarSlider.background": "#7a009633",
         // Status Bar
         "statusBar.background": "#7a0096",
         "statusBar.noFolderBackground": "#7a0096",
         "statusBar.debuggingBackground": "#5b006f",
-        "statusBar.foreground": "#ffffff",
+        "statusBar.foreground": "#c9d1d9",
         // Toolbar
         "toolbar.hoverBackground": "#7a009633",
-        // List
+        // Test
+        "testing.iconPassed": "#1ac66a",
+        "testing.iconFailed": "#fb1911",
+        // List"
         "list.hoverBackground": "#7a009650",
         "list.hoverForeground": "#009cfe",
         "list.activeSelectionBackground": "#7a009633",
         "list.inactiveSelectionBackground": "#7a009633",
         "list.inactiveSelectionForeground": "#c300ee",
+        // Titlebar
+        "titleBar.border": "#7a009650",
         "titleBar.activeBackground": "#7a009699",
-        "titleBar.activeForeground": "#fff",
+        "titleBar.activeForeground": "#c9d1d9",
         // Tab
         "tab.activeBackground": "#0d1117",
+        "tab.activeForeground": "#c300ee",
         "tab.hoverBackground": "#7a009610",
         "tab.inactiveBackground": "#7a009633",
-        "tab.activeForeground": "#c300ee",
         "tab.inactiveForeground": "#aaa",
         "tab.hoverForeground": "#009cfe",
         "tab.unfocusedActiveForeground": "#009cfe",
-        "tab.border": "#00000000"
+        "tab.border": "#00000000",
+        // Panel
+        "panel.border": "#7a00962a",
     },
-    "window.zoomLevel": -0.65,
     "window.title": "${rootPath}${separator}${activeEditorShort}",
     "workbench.sideBar.location": "left",
     "workbench.startupEditor": "none",
@@ -256,9 +291,15 @@
     "languageStylus.useSeparator": false,
     "dart.debugExternalLibraries": true,
     "dart.debugSdkLibraries": true,
-    "cusom_conf" : {
-        "BACKGROUND_COLOR": "#0d1117"
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "task.problemMatchers.neverPrompt": {
+        "shell": true
+    },
+    "window.zoomLevel": -0.65,
+    // "window.zoomLevel": 2,
     // "editor.guides.indentation": false,
     // "editor.wordWrap": "off",
     // "diffEditor.wordWrap": "off",
