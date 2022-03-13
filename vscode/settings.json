@@ -299,7 +299,7 @@
         "shell": true
     },
     "window.zoomLevel": -0.65,
-    // "window.zoomLevel": 2,
+    // "window.zoomLevel": 1.25, // screen sharring
     // "editor.guides.indentation": false,
     // "editor.wordWrap": "off",
     // "diffEditor.wordWrap": "off",

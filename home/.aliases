@@ -29,7 +29,7 @@ alias brewUpdateAll='brew update && brew outdated && brew upgrade && brew cleanu
 alias notes='code $HOME/Development/personal/notes'
 alias topfiles="du -a $1 | sort -n -r | head -n 20"
 alias scim="sc-im"
-
+alias v="nvim"
 
 # Network
 alias dig="dig @8.8.8.8 ANY +noall +answer $1"
