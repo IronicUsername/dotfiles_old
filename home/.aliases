@@ -18,16 +18,18 @@ alias clirm='clear && echo -en "\e[3J"'
 alias clire='clirm && exec $SHELL'
 alias pt='pytest --no-cov -x'
 alias sv='source .venv/bin/activate'
-alias fml='flake8 . && mypy src && pydocstyle .'
+alias fml='flake8 . && mypy . && pydocstyle .'
 alias dcu='docker-compose up --build --force-recreate -d'
 alias killem='docker-compose down -v'
 alias piprm='pip freeze | xargs pip uninstall -y'
 alias dockerrm='docker system prune -a --volumes'
 alias nrs='npm run serve'
 alias nrd='npm run dev'
-alias brewUpdateAll='brew update && brew outdated && brew upgrade'
+alias brewUpdateAll='brew update && brew outdated && brew upgrade && brew cleanup'
 alias notes='code $HOME/Development/personal/notes'
-
+alias topfiles="du -a $1 | sort -n -r | head -n 20"
+alias scim="sc-im"
+alias v="nvim"
 
 # Network
 alias dig="dig @8.8.8.8 ANY +noall +answer $1"
@@ -140,7 +142,7 @@ function sshTunnel() {
 
 function lc () {
     cd $1 &&
-    la $2
+    ls -la $2
 }
 
 mkcd ()

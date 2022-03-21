@@ -207,10 +207,10 @@ prompt_virtualenv() {
   local virtualenv_path="$VIRTUAL_ENV"
   if [[ -n $virtualenv_path && -n $VIRTUAL_ENV_DISABLE_PROMPT ]]; then
     if [[ $POETRY_ACTIVE ]]; then
-	    prompt_segment magenta white "poetry loide"
-	  else
-	    prompt_segment magenta white "(`basename $virtualenv_path`)"
-	  fi
+      prompt_segment magenta white "poetry loide"
+    else
+      prompt_segment magenta white "(`basename $virtualenv_path`)"
+    fi
   fi
 }
 

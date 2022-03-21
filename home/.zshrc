@@ -38,9 +38,8 @@ plugins=(
 # Theme
 ZSH_THEME="agnoster-custom"
 
-source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
-source $HOME/.iterm2_shell_integration.zsh
+source $ZSH/oh-my-zsh.sh
 
 
 # Added /include CFLAGS so XCode is working properly
@@ -56,7 +55,7 @@ export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PATH=$HOME/.flutter/flutter/bin:$PATH
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH=/usr/local/opt/openjdk/bin:$PATH
 export ANDROID_HOME=/usr/local/share/android-sdk
 
 export PYTHONDONTWRITEBYTECODE=1
@@ -70,13 +69,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # TheFuck
 eval $(thefuck --alias)
-
-# Poetry
-source $HOME/.poetry/env
-
-if [[ -o login ]]; then
-    export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-fi
 
 # Start
 if [[ ! $POETRY_ACTIVE ]] && [[ $TERM_PROGRAM != "vscode" ]]; then

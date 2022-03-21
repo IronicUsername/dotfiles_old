@@ -29,3 +29,5 @@ Temporary Items
 home/.bin/circleci
 home/.bin/helm
 home/.bin/sops
+home/zsh/custom/plugins/*
+home/zsh/custom/iterm2_shell_integration.zsh
